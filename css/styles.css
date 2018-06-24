@@ -206,6 +206,11 @@ ul, li {
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+  /*To make footer overlap restaurant map*/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
 }
 
 nav h1 {
@@ -296,8 +301,8 @@ nav h1 {
     width: 85%;
   }
   #reviews-list li p {
-  
-    margin: 0 0 10px;
+    
+      margin: 0 0 10px;
   }
   #restaurant-hours td {
     color: #666;
@@ -395,21 +400,26 @@ nav h1 {
 /*        max-height: 430px;
  */       padding: 0 10px 25px;
      }
+     #restaurants-list li h1 {
+       font-size: 12pt;
+     }
   } 
   @media screen and (max-width: 675px) {
     #restaurants-list li {
       width: 250px;
-      padding: 0 0 25px;
-      border: 1px solid #ccc;
+      padding: 0 10px 25px;
+      border: 2px solid #ccc;
       margin: 3px;
+    }
+
+    #restaurants-list p {
+      font-size: 10pt;
     }
   }
   @media screen and (max-width: 563px) {
     #restaurants-list li {
       border: 2px solid #ccc;
       margin: 15px;
-      padding: 0 30px 25px;
-      width: 270px;
     }
     .filter-options select {
       width: 145px;
@@ -417,6 +427,9 @@ nav h1 {
     }
     .filter-options h2 {
       font-size: 12pt;
+    }
+    #footer {
+      padding: 10px;
     }
   }
   @media screen and (max-width: 490px) {
@@ -456,6 +469,9 @@ nav h1 {
     .filter-options h2 {
       display: none;
     }
+    #footer {
+      padding: 5px;
+    }
     
   }
   @media screen and (max-width: 390px) {
@@ -481,4 +497,13 @@ nav h1 {
     #restaurant-hours {
       width: 100%;
     }
+    @media screen and (max-width: 330px) {
+      .filter-options select {
+        width: 125px;
+        font-size: 8pt;
+        padding: 0 5px;
+        margin: 10px 2px;
+      }
+    }
+
   }
