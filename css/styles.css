@@ -200,7 +200,7 @@ ul, li {
 
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #eee;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -497,6 +497,7 @@ nav h1 {
     #restaurant-hours {
       width: 100%;
     }
+  }
     @media screen and (max-width: 330px) {
       .filter-options select {
         width: 125px;
@@ -504,6 +505,9 @@ nav h1 {
         padding: 0 5px;
         margin: 10px 2px;
       }
+      #footer {
+        padding: 3px;
+      }
+
     }
 
-  }
