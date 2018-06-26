@@ -13,6 +13,22 @@ body,td,th,p {
 	line-height: 1.5;
 }
 
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  background: #770101;
+  padding: 8px;
+  z-index: 1000;
+  color: white !important;
+  width: 100px;
+  font-size: 12pt;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 #maincontent {
     display: flex;
     flex-wrap: wrap;
@@ -53,13 +69,13 @@ body,td,th,p {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-  color: #0275d8;
+  color: #0264bb;
   text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-  color: #01447e;
+  color: #770101;
   text-decoration: underline;
 }
 
@@ -499,6 +515,11 @@ nav h1 {
     }
   }
     @media screen and (max-width: 330px) {
+      nav h1 a {
+        font-size: 12pt;
+        letter-spacing: 2px;
+      }
+      
       .filter-options select {
         width: 125px;
         font-size: 8pt;
