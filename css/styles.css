@@ -350,6 +350,11 @@ nav h1 {
     width: 100%;
   }
   
+  /*change focus ring*/
+  *:focus {
+    outline: 3px solid rgb(209, 0, 0);
+  }
+
 
   @media screen and (max-width: 768px) {
   
