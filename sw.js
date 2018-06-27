@@ -14,6 +14,8 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(currentCache).then(function(cache) {
         return cache.addAll(urlsToCache);
+        }).catch(function (error) {
+            console.log(error);
         })
     );
     
