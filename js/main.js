@@ -212,10 +212,12 @@ document.querySelector('.skip-link').addEventListener('click', function() {
   document.querySelector('#restaurants').focus();
 });
 
+
+
 //register service worker
 
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('https://islam888.github.io/restaurant-reviews/sw.js').then(function(reg) {
+  navigator.serviceWorker.register('./sw.js').then(function(reg) {
     console.log('sw registered');
   });
 }
