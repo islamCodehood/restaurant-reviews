@@ -212,6 +212,15 @@ document.querySelector('.skip-link').addEventListener('click', function() {
   document.querySelector('#restaurants').focus();
 });
 
+//register service worker
+
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('/sw.js').then(function(reg) {
+    console.log('hi');
+  });
+}
+
+
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
