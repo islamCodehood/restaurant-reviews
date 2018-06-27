@@ -1,3 +1,4 @@
+console.log('hi');
 const currentCache = 'restaurantsCache-v1';
 self.addEventListener('install', function(event) {
     //urls to be cached
