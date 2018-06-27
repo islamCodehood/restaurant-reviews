@@ -219,6 +219,15 @@ document.querySelector('.skip-link').addEventListener('click', function() {
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register('./sw.js').then(function(reg) {
     console.log('sw registered');
+    if (reg.installing) {
+      console.log('sw installing');
+    }
+    if (reg.waiting) {
+      console.log('sw waiting');
+    }
+    if (reg.active) {
+      console.log('active');
+    }
   });
 }
 
