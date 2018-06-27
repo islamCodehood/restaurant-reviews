@@ -216,7 +216,7 @@ document.querySelector('.skip-link').addEventListener('click', function() {
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register('/sw.js').then(function(reg) {
-    console.log('hi');
+    console.log('sw registered');
   });
 }
 
