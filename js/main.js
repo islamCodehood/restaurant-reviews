@@ -215,7 +215,7 @@ document.querySelector('.skip-link').addEventListener('click', function() {
 //register service worker
 
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/sw.js').then(function(reg) {
+  navigator.serviceWorker.register('https://islam888.github.io/restaurant-reviews/sw.js').then(function(reg) {
     console.log('sw registered');
   });
 }
