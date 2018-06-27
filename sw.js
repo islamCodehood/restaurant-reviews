@@ -35,3 +35,19 @@ self.addEventListener('activate', function(event) {
     );
 });
 
+self.addEventListener('fetch', function(event) {
+    event.respondWith(
+        caches.match(event.request).then(function(response) {
+            if (response) return response;
+            return fetch(event.request).then(function(response) {
+                if (response.status === 404) {
+                    //free download and personal use png from https://pngtree.com/freepng/404-error-vector_2871439.html
+                    return fetch('/img/404.png');
+                }
+                return response;
+            })
+        })
+    );
+
+});
+
