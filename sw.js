@@ -1,14 +1,14 @@
-const currentCache = 'restaurantsCache-v1';
+const currentCache = 'restaurantsCache-v2';
 self.addEventListener('install', function(event) {
     //urls to be cached
     const urlsToCache = [
-        '/',
-        '/css/styles.css',
-        '/data/restaurants.json',
-        '/img/',
-        '/js/main.js',
-        '/js/restaurant_info.js',
-        '/js/dbhelper.js',
+        'https://islam888.github.io/restaurant-reviews/',
+        'https://islam888.github.io/restaurant-reviews/css/styles.css',
+        'https://islam888.github.io/restaurant-reviews/data/restaurants.json',
+        'https://islam888.github.io/restaurant-reviews/img/',
+        'https://islam888.github.io/restaurant-reviews/js/main.js',
+        'https://islam888.github.io/restaurant-reviews/js/restaurant_info.js',
+        'https://islam888.github.io/restaurant-reviews/js/dbhelper.js',
         'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css',
         'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
         'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'
