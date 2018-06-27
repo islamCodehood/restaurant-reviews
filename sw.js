@@ -9,10 +9,7 @@ self.addEventListener('install', function(event) {
         './img/',
         './js/main.js',
         './js/restaurant_info.js',
-        './js/dbhelper.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css',
-        'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
-        'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'
+        './js/dbhelper.js'
     ];
     event.waitUntil(
         caches.open(currentCache).then(function(cache) {
