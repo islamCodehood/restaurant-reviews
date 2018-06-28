@@ -3,7 +3,7 @@ self.addEventListener('install', function(event) {
     //urls to be cached
     const urlsToCache = [
         '/index.html',
-        '/restaurant,html',
+        '/restaurant.html',
         '/css/styles.css',
         '/data/restaurants.json',
         '/js/main.js',
