@@ -1,5 +1,5 @@
-var currentCache = 'restaurantsCache-v1';
-self.addEventListener('install', function(event) {
+const currentCache = 'restaurantsCache-v1';
+self.addEventListener('install', event => {
     //urls to be cached
     const urlsToCache = [
         './',
@@ -37,34 +37,26 @@ self.addEventListener('install', function(event) {
         'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'
     ];
     event.waitUntil(
-        caches.open(currentCache).then(function(cache) {
-        return cache.addAll(urlsToCache);
-        }).catch(function (error) {
+        caches.open(currentCache).then(cache => cache.addAll(urlsToCache)).catch(error => {
             console.log(error);
         })
     );
     
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', event => {
     event.waitUntil(
-        caches.keys().then(function(cacheNames) {
-            return Promise.all(
-                cacheNames.filter(function(cacheName) {
-                    return cacheName !== currentCache;
-                }).map(function(cacheName) {
-                    return caches.delete(cacheName);
-                })
-            );
-        })
+        caches.keys().then(cacheNames => Promise.all(
+            cacheNames.filter(cacheName => cacheName !== currentCache).map(cacheName => caches.delete(cacheName))
+        ))
     );
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', event => {
     event.respondWith(
-        caches.match(event.request).then(function(response) {
+        caches.match(event.request).then(response => {
             if (response) return response;
-            return fetch(event.request).then(function(response) {
+            return fetch(event.request).then(response => {
                 if (response.status === 404) {
                     //free download and personal use png from https://pngtree.com/freepng/404-error-vector_2871439.html
                     return fetch('./img/404.png');
