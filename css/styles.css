@@ -1,4 +1,4 @@
-/*body*/
+/*Body and html*/
 html,
 body {
     margin: 0;
@@ -13,6 +13,7 @@ body,td,th,p {
 	line-height: 1.5;
 }
 
+/*skip link to skip map*/
 .skip-link {
   position: absolute;
   left: 0;
@@ -29,6 +30,7 @@ body,td,th,p {
   top: 0;
 }
 
+/*main content styling in all pages*/
 #maincontent {
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +39,7 @@ body,td,th,p {
     min-height: 100%;
 }
 
+/*header in individual restaurant pages*/
 .inside header {
   position: fixed;
   top: 0;
@@ -44,6 +47,7 @@ body,td,th,p {
   width: 100%;
 }
 
+/*navigation part of individual restaurant pages*/
 #breadcrumb {
   padding: 10px 40px 16px;
   list-style: none;
@@ -80,8 +84,6 @@ body,td,th,p {
 }
 
 /*map*/
-
-
 #map-container {
   width: 100%;
 }
@@ -92,12 +94,12 @@ body,td,th,p {
 }
 
 
-/*header*/
-
+/*header in all pages*/
 header{
     display: block;
 }
 
+/*nav in all pages*/
 nav {
     width: 100%;
     height: 70px;
@@ -130,13 +132,12 @@ ul, li {
 
 
 
-
+/*filter in index.html page*/
 .filter-options {
   width: 100%;
   height: 50px;
   background-color: #252831;
-/*   align-items: center;
- */}
+}
 .filter-options h2 {
   color: white;
   font-size: 14pt;
@@ -290,6 +291,8 @@ nav h1 {
     padding: 140px 40px 30px;
     width: 50%;
   }
+
+  /*Review part */
   #reviews-container {
     padding: 30px 40px 80px;
   }
@@ -313,7 +316,6 @@ nav h1 {
     margin: 0 0 30px;
     overflow: hidden;
     padding: 0 20px 20px;
-    /* position: relative; */
     width: 85%;
   }
   #reviews-list li p {
@@ -356,6 +358,7 @@ nav h1 {
   }
 
 
+/*Start media queries*/
   @media screen and (max-width: 768px) {
   
     .inside header  {
@@ -418,8 +421,7 @@ nav h1 {
      }
      #restaurants-list li {
        width: 260px;
-/*        max-height: 430px;
- */       padding: 0 10px 25px;
+      padding: 0 10px 25px;
      }
      #restaurants-list li h1 {
        font-size: 12pt;
