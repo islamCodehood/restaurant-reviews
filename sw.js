@@ -1,4 +1,7 @@
+//The recent cache
 const currentCache = 'restaurantsCache-v1';
+
+//service worker install event and caching while installing 
 self.addEventListener('install', event => {
     //urls to be cached
     const urlsToCache = [
@@ -44,6 +47,7 @@ self.addEventListener('install', event => {
     
 });
 
+//service worker activate event and deleting older caches while activating
 self.addEventListener('activate', event => {
     event.waitUntil(
         caches.keys().then(cacheNames => Promise.all(
@@ -52,6 +56,8 @@ self.addEventListener('activate', event => {
     );
 });
 
+/*service worker fetch event and respond with cache if there is something in cache.
+If not responding from network. If the response status is 404 then respond with 404 image*/
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(response => {
