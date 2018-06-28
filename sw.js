@@ -20,7 +20,10 @@ self.addEventListener('install', function(event) {
         '/img/9.jpg',
         '/img/10.jpg',
         '/img/404.png',
-        '/img/favicon.png'
+        '/img/favicon.png',
+        'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css',
+        'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
+        'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'
     ];
     event.waitUntil(
         caches.open(currentCache).then(function(cache) {
