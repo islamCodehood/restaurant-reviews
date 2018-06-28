@@ -196,9 +196,8 @@ getParameterByName = (name, url) => {
 }
 
 //register service worker
-
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('./sw.js').then(function(reg) {
+  navigator.serviceWorker.register('./sw.js').then(reg => {
     console.log('sw registered');
     if (reg.installing) {
       console.log('sw installing');
