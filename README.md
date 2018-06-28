@@ -1,5 +1,6 @@
 # Restaurant Review App
 
+
 ### Contents:
 
 - [App Web Address](#app-web-address).
@@ -8,9 +9,11 @@
 - [License](#license).
 
 
+
 ## App Web Address:
 
 - https://islam888.github.io/restaurant-reviews/
+
 
 
 ## Description:
@@ -27,4 +30,23 @@
   3. Restaurant Reviews.
   
   
- 
+  
+##  App Characteristics:
+
+- ### Responsive Design: 
+  It can be viewed and efficiently used over a wide range of desktop and mobile devices with different viewports sizes.
+  
+- ### Accessiblity:
+  1. Assessitive devices friendly.
+  2. Optimized Design and Color Contrast.
+  3. Optimized and Well ordered focus.
+  4. Keyboard Users friendly.
+  
+- ### Offline Availability:
+  The app is available to view and use offline and in case of slow netwrok after the first use.
+
+
+
+## License:
+
+- This project is licensed under the terms of the [MIT](https://github.com/Islam888/restaurant-reviews/blob/master/LICENSE).
