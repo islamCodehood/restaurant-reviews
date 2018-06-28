@@ -2,25 +2,25 @@ var currentCache = 'restaurantsCache-v2';
 self.addEventListener('install', function(event) {
     //urls to be cached
     const urlsToCache = [
-        '/index.html',
-        '/restaurant.html',
-        '/css/styles.css',
-        '/data/restaurants.json',
-        '/js/main.js',
-        '/js/restaurant_info.js',
-        '/js/dbhelper.js',
-        '/img/1.jpg',
-        '/img/2.jpg',
-        '/img/3.jpg',
-        '/img/4.jpg',
-        '/img/5.jpg',
-        '/img/6.jpg',
-        '/img/7.jpg',
-        '/img/8.jpg',
-        '/img/9.jpg',
-        '/img/10.jpg',
-        '/img/404.png',
-        '/img/favicon.png',
+        'https://islam888.github.io/restaurant-reviews/index.html',
+        'https://islam888.github.io/restaurant-reviews/restaurant.html',
+        'https://islam888.github.io/restaurant-reviews/css/styles.css',
+        'https://islam888.github.io/restaurant-reviews/data/restaurants.json',
+        'https://islam888.github.io/restaurant-reviews/js/main.js',
+        'https://islam888.github.io/restaurant-reviews/js/restaurant_info.js',
+        'https://islam888.github.io/restaurant-reviews/js/dbhelper.js',
+        'https://islam888.github.io/restaurant-reviews/img/1.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/2.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/3.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/4.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/5.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/6.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/7.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/8.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/9.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/10.jpg',
+        'https://islam888.github.io/restaurant-reviews/img/404.png',
+        'https://islam888.github.io/restaurant-reviews/img/favicon.png',
         'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css',
         'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
         'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'
@@ -56,7 +56,7 @@ self.addEventListener('fetch', function(event) {
             return fetch(event.request).then(function(response) {
                 if (response.status === 404) {
                     //free download and personal use png from https://pngtree.com/freepng/404-error-vector_2871439.html
-                    return fetch('/img/404.png');
+                    return fetch('https://islam888.github.io/restaurant-reviews/img/404.png');
                 }
                 return response;
             })
