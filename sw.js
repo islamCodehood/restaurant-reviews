@@ -1,5 +1,5 @@
 //The recent cache
-const currentCache = 'restaurantsCache-v1';
+const currentCache = 'restaurantsCache-v2';
 
 //service worker install event and caching while installing 
 self.addEventListener('install', event => {
